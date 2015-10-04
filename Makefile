@@ -7,7 +7,7 @@ clean:
 
 binary: clean
 	gox -osarch="linux/amd64 darwin/amd64" \
-		-output "../../pkg/{{.Dir}}-${GIT_VER}-{{.OS}}-{{.Arch}}" \
+		-output "pkg/{{.Dir}}-${GIT_VER}-{{.OS}}-{{.Arch}}" \
 		-ldflags "-X main.version ${GIT_VER} -X main.buildDate ${DATE}"
 
 package: binary
