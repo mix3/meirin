@@ -1,0 +1,25 @@
+addr        = ":8080"
+domain      = "example.com"
+session_key = "secret123"
+
+auth {
+    service       = "google"
+    client_id     = "secret client id"
+    client_secret = "secret client secret"
+    redirect_url  = "https://example.com/oauth2callback"
+    #restrictions = [
+    #    "yourdomain.com",
+    #    "example@gmail.com",
+    #]
+}
+
+proxy {
+    hoge {
+        path = "/"
+        dest = "http://127.0.0.1:8081"
+    }
+    fuga {
+        path = "/"
+        dest = "http://127.0.0.1:8081"
+    }
+}
